@@ -1,0 +1,13 @@
+<!DOCTYPE Html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HelloMvc</title>
+    <meta http-equiv="Content-Type" content = "text/html; charset=utf-8"/>
+</head>
+<body>
+<!--
+param이 있을때는 설정값 없으면 default값(controller에서 설정한)
+-->
+<p th:text="'안녕하세요. '+ ${name}+'님'"> 안녕하세요. 사용자님</p>
+</body>
+</html>
