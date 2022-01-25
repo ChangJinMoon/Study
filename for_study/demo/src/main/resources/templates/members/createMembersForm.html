@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<div class="container">
+    <!--
+    form action은 해당 폼의 액션 결과를 어디에 전송할지 url을 적는다
+    method는 httpMethod중 어떤 향식으로 액션을 실행할지 적는다
+    해당 예제는 데이터를 보내는 것으로 Post를 사용한다
+    해당 url에 post방식으로 데이터를 전송한다
+    -->
+    <form action="/members/new" method="post">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <!--
+            id는 label for={id}에 연결되며
+            name은 서버에 보낼때 받을 키를 명시한다
+            예) 서버 Member 객체 String name이 있다면 해당 변수에 저장
+            placeholder는 form default값이다
+            -->
+            <input type="text" id="name" name="name" placeholder="이름 입력">
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+</body>
+
+</html>

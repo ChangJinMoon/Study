@@ -1,6 +1,6 @@
 package jin.pratice.memberService.demo.repository;
 
-import jin.pratice.hellospring.domain.Member;
+import jin.pratice.memberService.demo.domain.Member;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

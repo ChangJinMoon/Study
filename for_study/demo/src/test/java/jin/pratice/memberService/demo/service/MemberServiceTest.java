@@ -12,10 +12,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 //Test 껍데기 만들기 단축키 -> command + shift + t
 public class MemberServiceTest {
-    MemberService memberService = new MemberService();
     MemoryMemberRepository memoryMemberRepository =
             new MemoryMemberRepository();
-
+    MemberService memberService = new MemberService(memoryMemberRepository);
     @BeforeEach
     void beforeEach(){
         //각 Test 함수가 실행 되기전 실행되는 코드

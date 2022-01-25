@@ -1,17 +1,26 @@
 package jin.pratice.memberService.demo.service;
 
 import jin.pratice.memberService.demo.domain.Member;
+import jin.pratice.memberService.demo.repository.MemberRespository;
 import jin.pratice.memberService.demo.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service
 public class MemberService {
-    MemoryMemberRepository memoryMemberRepository =
-            new MemoryMemberRepository();
+    MemberRespository memoryMemberRepository;
+
+    //@Autowired
+    public MemberService(MemberRespository memoryMemberRepository) {
+        this.memoryMemberRepository = memoryMemberRepository;
+    }
+
     /*
-    회원 가입
-     */
+        회원 가입
+         */
     public Long join(Member member){
         //중복 이름 가입 불가능 비지니스 로직 삽입
         if(catchDoubleName(member.getName()))

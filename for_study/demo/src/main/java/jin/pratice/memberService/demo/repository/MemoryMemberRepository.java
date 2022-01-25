@@ -1,8 +1,10 @@
 package jin.pratice.memberService.demo.repository;
 import jin.pratice.memberService.demo.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+//@Repository
 public class MemoryMemberRepository implements MemberRespository {
 
     private static Map<Long, Member> repository = new HashMap<>();
